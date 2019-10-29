@@ -23,12 +23,16 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 
 var editElem = document.getElementById("edit");
 editElem.contentEditable="false";
+
+function changeText(){ 
+            document.forms[0].text.style.cssText = "font-weight: bold"; 
+            } 
 </script>
 
 </head>
 <body>
 <body onload="checkEdits()">
-    <div id="edit" contenteditable="true" id="text">
+    <div id="edit" contenteditable="true" id="text" onclick="changeText()">
         Here is the element's original content
         </div>
         <input type="button" value="Save" onclick="saveEdits()"/>
