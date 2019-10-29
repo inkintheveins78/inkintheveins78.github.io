@@ -4,7 +4,11 @@
 <head>
     <style>
         #edit {background-color:#FFFF99;}
+        #edit {height:auto;
+               width:100%;
+               }
     </style>
+
 <script type="text/javascript">
     function saveEdits() {
 var editElem = document.getElementById("edit");
@@ -19,8 +23,8 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 
 var editElem = document.getElementById("edit");
 editElem.contentEditable="false";
-
 </script>
+
 </head>
 <body>
 <body onload="checkEdits()">
