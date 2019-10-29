@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <title>Notes</title>
+<head>
+    <style>
+        #edit {background-color:#FFFF99;}
+    </style>
+<script type="text/javascript">
+    function saveEdits() {
+var editElem = document.getElementById("edit");
+var userVersion = editElem.innerHTML;
+localStorage.userEdits = userVersion;
+document.getElementById("update").innerHTML="Edits saved!";
+}
+function checkEdits() {
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+
+var editElem = document.getElementById("edit");
+editElem.contentEditable="false";
+
+</script>
+</head>
+<body>
+<body onload="checkEdits()">
+    <div id="edit" contenteditable="true" id="text">
+        Here is the element's original content
+        </div>
+        <input type="button" value="Save" onclick="saveEdits()"/>
+</body>
+</html>
