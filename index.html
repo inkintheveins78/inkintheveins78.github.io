@@ -32,9 +32,10 @@ function changeText(){
 </head>
 <body>
 <body onload="checkEdits()">
-    <div id="edit" contenteditable="true" id="text" onclick="changeText()">
+    <div id="edit" contenteditable="true" id="text">
         Here is the element's original content
         </div>
         <input type="button" value="Save" onclick="saveEdits()"/>
+        <input type="button" value="Bold" onclick="changeText()"/>
 </body>
 </html>
