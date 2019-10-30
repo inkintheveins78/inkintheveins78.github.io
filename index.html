@@ -24,9 +24,6 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 var editElem = document.getElementById("edit");
 editElem.contentEditable="false";
 
-function changeText(){ 
-            document.forms[0].text.style.cssText = "font-weight: bold"; 
-            } 
 </script>
 
 </head>
@@ -36,6 +33,5 @@ function changeText(){
         Here is the element's original content
         </div>
         <input type="button" value="Save" onclick="saveEdits()"/>
-        <input type="button" value="Bold" onclick="changeText()"/>
 </body>
 </html>
