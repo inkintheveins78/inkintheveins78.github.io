@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
     <title>Notes</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
 <head>
     <style>
-        #edit {background-color:#FFFF99;}
-        #edit {height:auto;
-               width:100%;
-               }
+        #edit {background-color:#ffff99;
+                border: solid 2px black;
+                resize: both;
+                overflow: auto;       
+        }
+
     </style>
 
 <script type="text/javascript">
@@ -28,10 +31,18 @@ editElem.contentEditable="false";
 
 </head>
 <body>
+<center>
 <body onload="checkEdits()">
     <div id="edit" contenteditable="true" id="text">
         Here is the element's original content
-        </div>
-        <input type="button" value="Save" onclick="saveEdits()"/>
-</body>
+        </div><br>
+        <input type="button" value="Save" onclick="saveEdits()" style="font-size: 30px"/>
+</center>
+        <hr>
+<center>
+        <button style="font-size: 13px" onclick="document.execCommand('bold');">toggle bold</button>
+        <button style="font-size: 13px" onclick="document.execCommand('italic');">toggle italic</button>
+        <button style="font-size: 13px" onclick="document.execCommand('underline');">toggle underline</button>
+</center>
+    </body>
 </html>
